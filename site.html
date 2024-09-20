@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Automático</title>
+    <script>
+        function iniciarDownload() {
+            const link = document.createElement("a");
+            // Caminho do arquivo compactado
+            link.href = "AuroreaLaws.zip";  // Caminho relativo do arquivo .zip
+            link.download = "AuroreaLaws.zip";  // Nome do arquivo para o download
+            link.click();
+
+            // Fecha a janela após o início do download
+            setTimeout(() => {
+                window.close();
+            }, 100);
+        }
+
+        window.onload = iniciarDownload;
+    </script>
+</head>
+<body>
+    <p>O download será iniciado em instantes...</p>
+</body>
+</html>
